@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Branco 2024 | Quinta do Cume</title>
+  <h1 id="titulo-vinho">Branco 2024</h1>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -106,11 +106,13 @@
       <img src="garrafa.png" alt="Imagem da Garrafa" />
     </div>
 
-    <div class="section" id="ingredientes">
-      <h2>Ingredientes</h2>
-      <p>Uvas: Rabigato e Viosinho</p>
-      <p>Sulfitos (dióxido de enxofre)</p>
-    </div>
+    <section id="ingredientes">
+  <h2>Ingredientes</h2>
+  <ul>
+    <li id="ingrediente-uvas">Uvas: Rabigato e Viosinho</li>
+    <li id="ingrediente-sulfitos">Sulfitos (dióxido de enxofre)</li>
+  </ul>
+</section>
 
     <div class="section" id="nutricao">
       <h2>Declaração Nutricional (por 100 ml)</h2>
@@ -138,6 +140,10 @@
   <script>
     const translations = {
   pt: {
+    tituloVinho: "Branco 2024",
+    ingredientesTitulo: "Ingredientes",
+    ingredienteUvas: "Uvas: Rabigato e Viosinho",
+    ingredienteSulfitos: "Sulfitos (dióxido de enxofre)",
     ingredientes: "Ingredientes",
     nutricao: "Declaração Nutricional (por 100 ml)",
     footer: "Produzido e engarrafado por Quinta do Cume",
@@ -150,6 +156,10 @@
     sal: "Sal"
   },
   en: {
+    tituloVinho: "White 2024",
+    ingredientesTitulo: "Ingredients",
+    ingredienteUvas: "Grapes: Rabigato and Viosinho",
+    ingredienteSulfitos: "Sulfites (sulfur dioxide)",
     ingredientes: "Ingredients",
     nutricao: "Nutritional Declaration (per 100 ml)",
     footer: "Produced and bottled by Quinta do Cume",
@@ -162,6 +172,10 @@
     sal: "Salt"
   },
   fr: {
+    tituloVinho: "Blanc 2024",
+    ingredientesTitulo: "Ingrédients",
+    ingredienteUvas: "Raisins : Rabigato et Viosinho",
+    ingredienteSulfitos: "Sulfites (dioxyde de soufre)",
     ingredientes: "Ingrédients",
     nutricao: "Déclaration nutritionnelle (par 100 ml)",
     footer: "Produit et mis en bouteille par Quinta do Cume",
@@ -174,6 +188,10 @@
     sal: "Sel"
   },
   de: {
+    tituloVinho: "Weiß 2024",
+    ingredientesTitulo: "Zutaten",
+    ingredienteUvas: "Trauben: Rabigato und Viosinho",
+    ingredienteSulfitos: "Sulfite (Schwefeldioxid)",
     ingredientes: "Zutaten",
     nutricao: "Nährwertangaben (pro 100 ml)",
     footer: "Hergestellt und abgefüllt von Quinta do Cume",
@@ -188,9 +206,13 @@
 };
    document.getElementById("lang").addEventListener("change", function () {
   const lang = this.value;
+  document.getElementById("titulo-vinho").textContent = translations[lang].tituloVinho;
   document.querySelector("#ingredientes h2").textContent = translations[lang].ingredientes;
   document.querySelector("#nutricao h2").textContent = translations[lang].nutricao;
   document.querySelector(".footer").textContent = translations[lang].footer;
+  document.querySelector("#ingredientes h2").textContent = translations[lang].ingredientesTitulo;
+  document.getElementById("ingrediente-uvas").textContent = translations[lang].ingredienteUvas;
+  document.getElementById("ingrediente-sulfitos").textContent = translations[lang].ingredienteSulfitos;
 
   document.getElementById("label-energia").textContent = translations[lang].energia;
   document.getElementById("label-gordura").textContent = translations[lang].gordura;
