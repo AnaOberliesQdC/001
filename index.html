@@ -88,6 +88,17 @@
       border: 1px solid #ddd;
       padding: 8px;
     }
+    .nutritional-table ul.subpoint {
+      list-style-type: disc;
+      margin: 4px 0 0 20px;
+      padding: 0;
+}
+    .nutritional-table ul.subpoint li {
+      font-size: 0.9em;
+      font-style: italic;
+      color: #555;
+      margin: 0;
+}
     .footer {
       text-align: center;
       font-size: 0.9em;
@@ -159,14 +170,37 @@
     <div class="section" id="nutricao">
       <h2>Declaração Nutricional (por 100 ml)</h2>
         <table class="nutritional-table">
-            <tr><td id="label-energia">Valor energético</td><td>327 kJ / 78 kcal</td></tr>
-            <tr><td id="label-gordura">Gordura</td><td>0 g</td></tr>
-            <tr><td id="label-gordura-sat">• das quais saturadas</td><td>0 g</td></tr>
-            <tr><td id="label-hidratos">Hidratos de carbono</td><td>0,7 g</td></tr>
-            <tr><td id="label-acucares">• dos quais açúcares</td><td>&lt; 0,1 g</td></tr>
-            <tr><td id="label-proteinas">Proteínas</td><td>&lt; 0,1 g</td></tr>
-            <tr><td id="label-sal">Sal</td><td>&lt; 0,01 g</td></tr>
-        </table>
+  <tr>
+    <td id="label-energia">Valor energético</td>
+    <td>327 kJ / 78 kcal</td>
+  </tr>
+  <tr>
+    <td id="label-gordura">
+      Gordura
+      <ul class="subpoint">
+        <li id="label-gordura-sat">das quais saturadas</li>
+      </ul>
+    </td>
+    <td>0 g<br>0 g</td>
+  </tr>
+  <tr>
+    <td id="label-hidratos">
+      Hidratos de carbono
+      <ul class="subpoint">
+        <li id="label-acucares">dos quais açúcares</li>
+      </ul>
+    </td>
+    <td>0,7 g<br>&lt; 0,1 g</td>
+  </tr>
+  <tr>
+    <td id="label-proteinas">Proteínas</td>
+    <td>&lt; 0,1 g</td>
+  </tr>
+  <tr>
+    <td id="label-sal">Sal</td>
+    <td>&lt; 0,01 g</td>
+  </tr>
+</table>
     </div>
 
     <div class="consumo-responsavel">
