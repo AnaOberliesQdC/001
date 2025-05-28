@@ -216,6 +216,10 @@
   <script>
     const translations = {
   pt: {
+    tituloVinho: "Branco 2024",
+    ingredientesTitulo: "Ingredientes",
+    ingredienteUvas: "Uvas: Rabigato e Viosinho",
+    ingredienteSulfitos: "Sulfitos (dióxido de enxofre)",
     infoProdutoTitle: "Informação do Produto",
     labelTipoProduto: "Tipo de produto:",
     valorTipoProduto: "Vinho",
@@ -227,14 +231,8 @@
     valorTeorAcucar: "Seco",
     labelCorVinho: "Cor do vinho:",
     valorCorVinho: "Vinho Branco",
-    tituloVinho: "Branco 2024",
-    ingredientesTitulo: "Ingredientes",
-    ingredienteUvas: "Uvas: Rabigato e Viosinho",
-    ingredienteSulfitos: "Sulfitos (dióxido de enxofre)",
-    ingredientes: "Ingredientes",
-    nutricao: "Declaração Nutricional (por 100 ml)",
-    footer: "Produzido e engarrafado por Quinta do Cume",
-    labelenergia: "Valor energético",
+    nutricaoTitulo: "Declaração Nutricional (por 100 ml):",
+    labelEnergia: "Valor energético",
     labelLipidos: "Lípidos",
     labelGorduraSat: "das quais saturadas",
     labelHidratos: "Hidratos de carbono",
@@ -243,6 +241,10 @@
     labelSal: "Sal"
   },
   en: {
+   tituloVinho: "White 2024",
+    ingredientesTitulo: "Ingredients",
+    ingredienteUvas: "Grapes: Rabigato and Viosinho",
+    ingredienteSulfitos: "Sulfites (sulfur dioxide)",
     infoProdutoTitle: "Product Information",
     labelTipoProduto: "Product type:",
     valorTipoProduto: "Wine",
@@ -254,13 +256,7 @@
     valorTeorAcucar: "Dry",
     labelCorVinho: "Wine color:",
     valorCorVinho: "White Wine",
-    tituloVinho: "White 2024",
-    ingredientesTitulo: "Ingredients",
-    ingredienteUvas: "Grapes: Rabigato and Viosinho",
-    ingredienteSulfitos: "Sulfites (sulfur dioxide)",
-    ingredientes: "Ingredients",
-    nutricao: "Nutritional Declaration (per 100 ml)",
-    footer: "Produced and bottled by Quinta do Cume",
+    nutricaoTitulo: "Nutritional Information (per 100 ml):",
     labelEnergia: "Energy value",
     labelLipidos: "Lipids",
     labelGorduraSat: "of which saturates",
@@ -270,6 +266,10 @@
     labelSal: "Salt"
   },
   fr: {
+    tituloVinho: "Blanc 2024",
+    ingredientesTitulo: "Ingrédients",
+    ingredienteUvas: "Raisins : Rabigato et Viosinho",
+    ingredienteSulfitos: "Sulfites (dioxyde de soufre)",
     infoProdutoTitle: "Informations sur le produit",
     labelTipoProduto: "Type de produit:",
     valorTipoProduto: "Vin",
@@ -281,15 +281,9 @@
     valorTeorAcucar: "Sec",
     labelCorVinho: "Couleur du vin:",
     valorCorVinho: "Vin blanc",
-    tituloVinho: "Blanc 2024",
-    ingredientesTitulo: "Ingrédients",
-    ingredienteUvas: "Raisins : Rabigato et Viosinho",
-    ingredienteSulfitos: "Sulfites (dioxyde de soufre)",
-    ingredientes: "Ingrédients",
-    nutricao: "Déclaration nutritionnelle (par 100 ml)",
-    footer: "Produit et mis en bouteille par Quinta do Cume",
-    energia: "Valeur énergétique",
-    labelLipidos: "Matières grasses",
+    nutricaoTitulo: "Déclaration Nutritionnelle (pour 100 ml):",
+    labelEnergia: "Valeur énergétique",
+    labelLipidos: "Lipides",
     labelGorduraSat: "dont saturés",
     labelHidratos: "Glucides",
     labelAcucares: "dont sucres",
@@ -297,6 +291,10 @@
     labelSal: "Sel"
   },
   de: {
+     tituloVinho: "Weiß 2024",
+    ingredientesTitulo: "Zutaten",
+    ingredienteUvas: "Trauben: Rabigato und Viosinho",
+    ingredienteSulfitos: "Sulfite (Schwefeldioxid)",
     infoProdutoTitle: "Produktinformationen",
     labelTipoProduto: "Produkttyp:",
     valorTipoProduto: "Wein",
@@ -308,15 +306,9 @@
     valorTeorAcucar: "Trocken",
     labelCorVinho: "Weinfarbe:",
     valorCorVinho: "Weißwein",
-    tituloVinho: "Weiß 2024",
-    ingredientesTitulo: "Zutaten",
-    ingredienteUvas: "Trauben: Rabigato und Viosinho",
-    ingredienteSulfitos: "Sulfite (Schwefeldioxid)",
-    ingredientes: "Zutaten",
-    nutricao: "Nährwertangaben (pro 100 ml)",
-    footer: "Hergestellt und abgefüllt von Quinta do Cume",
-    energia: "Energiegehalt",
-    labelLipidos: "Fett",
+    nutricaoTitulo: "Nährwertangaben (pro 100 ml):",
+    labelEnergia: "Energiegehalt",
+    labelLipidos: "Lipide",
     labelGorduraSat: "davon gesättigte Fettsäuren",
     labelHidratos: "Kohlenhydrate",
     labelAcucares: "davon Zucker",
@@ -345,13 +337,14 @@
   document.getElementById("ingrediente-uvas").textContent = translations[lang].ingredienteUvas;
   document.getElementById("ingrediente-sulfitos").textContent = translations[lang].ingredienteSulfitos;
 
-  document.getElementById("label-energia").textContent = translations[lang].energia;
-  document.getElementById("label-gordura").textContent = translations[lang].gordura;
-  document.getElementById("label-gordura-sat").textContent = translations[lang].gordura_sat;
-  document.getElementById("label-hidratos").textContent = translations[lang].hidratos;
-  document.getElementById("label-acucares").textContent = translations[lang].acucares;
-  document.getElementById("label-proteinas").textContent = translations[lang].proteinas;
-  document.getElementById("label-sal").textContent = translations[lang].sal;
+  document.getElementById("nutricao-titulo").textContent = translations[lang].nutricaoTitulo;
+  document.getElementById("label-energia").textContent = translations[lang].labelEnergia;
+  document.getElementById("label-lipidos").firstChild.textContent = translations[lang].labelLipidos; 
+  document.getElementById("label-gordura-sat").textContent = translations[lang].labelGorduraSat;
+  document.getElementById("label-hidratos").firstChild.textContent = translations[lang].labelHidratos;
+  document.getElementById("label-acucares").textContent = translations[lang].labelAcucares;
+  document.getElementById("label-proteinas").textContent = translations[lang].labelProteinas;
+  document.getElementById("label-sal").textContent = translations[lang].labelSal;
 });
   </script>
 
