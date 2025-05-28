@@ -114,15 +114,15 @@
 
     <div class="section" id="nutricao">
       <h2>Declaração Nutricional (por 100 ml)</h2>
-      <table class="nutritional-table">
-        <tr><td>Valor energético</td><td>327 kJ / 78 kcal</td></tr>
-        <tr><td>Gordura</td><td>0 g</td></tr>
-        <tr><td>&nbsp;&nbsp;• das quais saturadas</td><td>0 g</td></tr>
-        <tr><td>Hidratos de carbono</td><td>0,7 g</td></tr>
-        <tr><td>&nbsp;&nbsp;• dos quais açúcares</td><td>&lt; 0,1 g</td></tr>
-        <tr><td>Proteínas</td><td>&lt; 0,1 g</td></tr>
-        <tr><td>Sal</td><td>&lt; 0,01 g</td></tr>
-      </table>
+        <table class="nutritional-table">
+            <tr><td id="label-energia">Valor energético</td><td>327 kJ / 78 kcal</td></tr>
+            <tr><td id="label-gordura">Gordura</td><td>0 g</td></tr>
+            <tr><td id="label-gordura-sat">• das quais saturadas</td><td>0 g</td></tr>
+            <tr><td id="label-hidratos">Hidratos de carbono</td><td>0,7 g</td></tr>
+            <tr><td id="label-acucares">• dos quais açúcares</td><td>&lt; 0,1 g</td></tr>
+            <tr><td id="label-proteinas">Proteínas</td><td>&lt; 0,1 g</td></tr>
+            <tr><td id="label-sal">Sal</td><td>&lt; 0,01 g</td></tr>
+        </table>
     </div>
 
     <div class="consumo-responsavel">
@@ -137,34 +137,69 @@
 
   <script>
     const translations = {
-      en: {
-        ingredientes: "Ingredients",
-        nutricao: "Nutritional Declaration (per 100 ml)",
-        footer: "Produced and bottled by Quinta do Cume"
-      },
-      fr: {
-        ingredientes: "Ingrédients",
-        nutricao: "Déclaration nutritionnelle (par 100 ml)",
-        footer: "Produit et mis en bouteille par Quinta do Cume"
-      },
-      de: {
-        ingredientes: "Zutaten",
-        nutricao: "Nährwertangaben (pro 100 ml)",
-        footer: "Hergestellt und abgefüllt von Quinta do Cume"
-      },
-      pt: {
-        ingredientes: "Ingredientes",
-        nutricao: "Declaração Nutricional (por 100 ml)",
-        footer: "Produzido e engarrafado por Quinta do Cume"
-      }
-    };
+  pt: {
+    ingredientes: "Ingredientes",
+    nutricao: "Declaração Nutricional (por 100 ml)",
+    footer: "Produzido e engarrafado por Quinta do Cume",
+    energia: "Valor energético",
+    gordura: "Gordura",
+    gordura_sat: "• das quais saturadas",
+    hidratos: "Hidratos de carbono",
+    acucares: "• dos quais açúcares",
+    proteinas: "Proteínas",
+    sal: "Sal"
+  },
+  en: {
+    ingredientes: "Ingredients",
+    nutricao: "Nutritional Declaration (per 100 ml)",
+    footer: "Produced and bottled by Quinta do Cume",
+    energia: "Energy value",
+    gordura: "Fat",
+    gordura_sat: "• of which saturates",
+    hidratos: "Carbohydrates",
+    acucares: "• of which sugars",
+    proteinas: "Proteins",
+    sal: "Salt"
+  },
+  fr: {
+    ingredientes: "Ingrédients",
+    nutricao: "Déclaration nutritionnelle (par 100 ml)",
+    footer: "Produit et mis en bouteille par Quinta do Cume",
+    energia: "Valeur énergétique",
+    gordura: "Matières grasses",
+    gordura_sat: "• dont saturées",
+    hidratos: "Glucides",
+    acucares: "• dont sucres",
+    proteinas: "Protéines",
+    sal: "Sel"
+  },
+  de: {
+    ingredientes: "Zutaten",
+    nutricao: "Nährwertangaben (pro 100 ml)",
+    footer: "Hergestellt und abgefüllt von Quinta do Cume",
+    energia: "Energiegehalt",
+    gordura: "Fett",
+    gordura_sat: "• davon gesättigte Fettsäuren",
+    hidratos: "Kohlenhydrate",
+    acucares: "• davon Zucker",
+    proteinas: "Proteine",
+    sal: "Salz"
+  }
+};
+   document.getElementById("lang").addEventListener("change", function () {
+  const lang = this.value;
+  document.querySelector("#ingredientes h2").textContent = translations[lang].ingredientes;
+  document.querySelector("#nutricao h2").textContent = translations[lang].nutricao;
+  document.querySelector(".footer").textContent = translations[lang].footer;
 
-    document.getElementById("lang").addEventListener("change", function () {
-      const lang = this.value;
-      document.querySelector("#ingredientes h2").textContent = translations[lang].ingredientes;
-      document.querySelector("#nutricao h2").textContent = translations[lang].nutricao;
-      document.querySelector(".footer").textContent = translations[lang].footer;
-    });
+  document.getElementById("label-energia").textContent = translations[lang].energia;
+  document.getElementById("label-gordura").textContent = translations[lang].gordura;
+  document.getElementById("label-gordura-sat").textContent = translations[lang].gordura_sat;
+  document.getElementById("label-hidratos").textContent = translations[lang].hidratos;
+  document.getElementById("label-acucares").textContent = translations[lang].acucares;
+  document.getElementById("label-proteinas").textContent = translations[lang].proteinas;
+  document.getElementById("label-sal").textContent = translations[lang].sal;
+});
   </script>
 
 </body>
