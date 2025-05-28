@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Branco 2024 | Quinta do Cume</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: white;
+      padding: 1em;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+    }
+    header img {
+      max-height: 60px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2em;
+      background: white;
+    }
+    .title {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 1em;
+      color: #004d00;
+    }
+    .wine-image {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2em;
+    }
+    .wine-image img {
+      max-width: 250px;
+    }
+    .section {
+      margin-bottom: 2em;
+    }
+    .section h2 {
+      font-size: 1.2em;
+      color: #006600;
+    }
+    .nutritional-table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    .nutritional-table td, .nutritional-table th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    .footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #777;
+      margin-top: 2em;
+    }
+    .lang-selector {
+      text-align: right;
+      margin-bottom: 1em;
+    }
+    .lang-selector select {
+      padding: 5px;
+    }
+    .consumo-responsavel {
+      margin-top: 2em;
+      text-align: center;
+    }
+    .consumo-responsavel img {
+      max-width: 100px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <!-- Inserir logotipo da Quinta do Cume -->
+    <a href="https://www.quintadocume.pt" target="_blank">
+      <img src="logotipo.png" alt="Quinta do Cume Logo" />
+    </a>
+  </header>
+
+  <div class="container">
+    <div class="lang-selector">
+      <label for="lang">Idioma:</label>
+      <select id="lang">
+        <option value="pt">Português</option>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+      </select>
+    </div>
+
+    <h1 class="title">Branco 2024</h1>
+
+    <div class="wine-image">
+      <!-- Inserir imagem da garrafa -->
+      <img src="garrafa.png" alt="Imagem da Garrafa" />
+    </div>
+
+    <div class="section" id="ingredientes">
+      <h2>Ingredientes</h2>
+      <p>Uvas: Rabigato e Viosinho</p>
+      <p>Sulfitos (dióxido de enxofre)</p>
+    </div>
+
+    <div class="section" id="nutricao">
+      <h2>Declaração Nutricional (por 100 ml)</h2>
+      <table class="nutritional-table">
+        <tr><td>Valor energético</td><td>327 kJ / 78 kcal</td></tr>
+        <tr><td>Gordura</td><td>0 g</td></tr>
+        <tr><td>&nbsp;&nbsp;• das quais saturadas</td><td>0 g</td></tr>
+        <tr><td>Hidratos de carbono</td><td>0,7 g</td></tr>
+        <tr><td>&nbsp;&nbsp;• dos quais açúcares</td><td>&lt; 0,1 g</td></tr>
+        <tr><td>Proteínas</td><td>&lt; 0,1 g</td></tr>
+        <tr><td>Sal</td><td>&lt; 0,01 g</td></tr>
+      </table>
+    </div>
+
+    <div class="consumo-responsavel">
+      <!-- Inserir imagem de consumo responsável -->
+      <img src="consumo_responsavel.png" alt="Consumo Responsável" />
+    </div>
+
+    <div class="footer">
+      Produzido e engarrafado por Quinta do Cume
+    </div>
+  </div>
+
+  <script>
+    const translations = {
+      en: {
+        ingredientes: "Ingredients",
+        nutricao: "Nutritional Declaration (per 100 ml)",
+        footer: "Produced and bottled by Quinta do Cume"
+      },
+      fr: {
+        ingredientes: "Ingrédients",
+        nutricao: "Déclaration nutritionnelle (par 100 ml)",
+        footer: "Produit et mis en bouteille par Quinta do Cume"
+      },
+      de: {
+        ingredientes: "Zutaten",
+        nutricao: "Nährwertangaben (pro 100 ml)",
+        footer: "Hergestellt und abgefüllt von Quinta do Cume"
+      },
+      pt: {
+        ingredientes: "Ingredientes",
+        nutricao: "Declaração Nutricional (por 100 ml)",
+        footer: "Produzido e engarrafado por Quinta do Cume"
+      }
+    };
+
+    document.getElementById("lang").addEventListener("change", function () {
+      const lang = this.value;
+      document.querySelector("#ingredientes h2").textContent = translations[lang].ingredientes;
+      document.querySelector("#nutricao h2").textContent = translations[lang].nutricao;
+      document.querySelector(".footer").textContent = translations[lang].footer;
+    });
+  </script>
+
+</body>
+</html>
