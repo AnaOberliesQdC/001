@@ -159,8 +159,8 @@
   </ul>
 </div>
     
-    <section id="ingredientes">
-  <h2>Ingredientes</h2>
+   <section id="ingredientes">
+  <h2 id="ingredientes-titulo">Ingredientes</h2>
   <ul>
     <li id="ingrediente-uvas">Uvas: Rabigato e Viosinho</li>
     <li id="ingrediente-sulfitos">Sulfitos (dióxido de enxofre)</li>
@@ -168,7 +168,7 @@
 </section>
 
     <div class="section" id="nutricao">
-      <h2>Declaração Nutricional (por 100 ml)</h2>
+  <h2 id="nutricao-titulo">Declaração Nutricional (por 100 ml)</h2>
         <table class="nutritional-table">
   <tr>
     <td id="labelenergia">Valor energético</td>
@@ -239,6 +239,7 @@
     labelAcucares: "dos quais açúcares",
     labelProteinas: "Proteínas",
     labelSal: "Sal"
+    footer: "Produzido e engarrafado por Quinta do Cume"
   },
   en: {
    tituloVinho: "White 2024",
@@ -264,6 +265,7 @@
     labelAcucares: "of which sugars",
     labelProteinas: "Proteins",
     labelSal: "Salt"
+    footer: "Produced and bottled by Quinta do Cume"
   },
   fr: {
     tituloVinho: "Blanc 2024",
@@ -289,6 +291,7 @@
     labelAcucares: "dont sucres",
     labelProteinas: "Protéines",
     labelSal: "Sel"
+    footer: "Produit et embouteillé par Quinta do Cume"
   },
   de: {
      tituloVinho: "Weiß 2024",
@@ -314,13 +317,14 @@
     labelAcucares: "davon Zucker",
     labelProteinas: "Proteine",
     labelSal: "Salz"
+    footer: "Hergestellt und abgefüllt von Quinta do Cume"
   }
 };
    document.getElementById("lang").addEventListener("change", function () {
   const lang = this.value;
   document.getElementById("titulo-vinho").textContent = translations[lang].tituloVinho;
-  document.querySelector("#ingredientes h2").textContent = translations[lang].ingredientes;
-  document.querySelector("#nutricao h2").textContent = translations[lang].nutricao;
+  document.getElementById("ingredientes-titulo").textContent = translations[lang].ingredientesTitulo;
+  document.getElementById("nutricao-titulo").textContent = translations[lang].nutricaoTitulo;
   document.querySelector(".footer").textContent = translations[lang].footer;
   document.getElementById("info-produto-title").textContent = translations[lang].infoProdutoTitle;
   document.getElementById("label-tipo-produto").textContent = translations[lang].labelTipoProduto;
@@ -339,12 +343,13 @@
 
   document.getElementById("nutricaotitulo").textContent = translations[lang].nutricaoTitulo;
   document.getElementById("labelenergia").textContent = translations[lang].labelEnergia;
-  document.getElementById("labellipidos").firstChild.textContent = translations[lang].labelLipidos; 
+  document.getElementById("labellipidos").childNodes[0].nodeValue = translations[lang].labelLipidos + "\n";
   document.getElementById("labelgordurasat").textContent = translations[lang].labelGorduraSat;
-  document.getElementById("labelhidratos").firstChild.textContent = translations[lang].labelHidratos;
+  document.getElementById("labelhidratos").childNodes[0].nodeValue = translations[lang].labelHidratos + "\n";
   document.getElementById("labelacucares").textContent = translations[lang].labelAcucares;
   document.getElementById("labelproteinas").textContent = translations[lang].labelProteinas;
   document.getElementById("labelsal").textContent = translations[lang].labelSal;
+  document.querySelector(".footer").textContent = translations[lang].footer;
 });
   </script>
 
