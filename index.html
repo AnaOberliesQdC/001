@@ -41,6 +41,38 @@
     .wine-image img {
       max-width: 250px;
     }
+    .product-info {
+  background-color: #f9f9f9;
+  border-radius: 12px; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;   
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .product-info h2 {
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+    }
+
+    .product-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+    }
+
+.product-info li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #555;
+    }
+
+.product-info li strong {
+  color: #222;
+    }
+
     .section {
       margin-bottom: 2em;
     }
@@ -105,6 +137,17 @@
       <img src="garrafa.png" alt="Imagem da Garrafa" />
     </div>
 
+    <div class="product-info">
+  <h2 id="info-produto-title">Informação do Produto</h2>
+  <ul>
+    <li><strong id="label-tipo-produto">Tipo de produto:</strong> <span id="valor-tipo-produto">Vinho</span></li>
+    <li><strong id="label-alcool">álc.:</strong> <span id="valor-alcool">13.5% vol</span></li>
+    <li><strong id="label-ano-vintage">Ano vintage:</strong> <span id="valor-ano-vintage">2024</span></li>
+    <li><strong id="label-teor-acucar">Teor de açúcar:</strong> <span id="valor-teor-acucar">Seco</span></li>
+    <li><strong id="label-cor-vinho">Cor do vinho:</strong> <span id="valor-cor-vinho">Vinho Branco</span></li>
+  </ul>
+</div>
+    
     <section id="ingredientes">
   <h2>Ingredientes</h2>
   <ul>
@@ -139,6 +182,17 @@
   <script>
     const translations = {
   pt: {
+    infoProdutoTitle: "Informação do Produto",
+    labelTipoProduto: "Tipo de produto:",
+    valorTipoProduto: "Vinho",
+    labelAlcool: "álc.:",
+    valorAlcool: "13.5% vol",
+    labelAnoVintage: "Ano vintage:",
+    valorAnoVintage: "2024",
+    labelTeorAcucar: "Teor de açúcar:",
+    valorTeorAcucar: "Seco",
+    labelCorVinho: "Cor do vinho:",
+    valorCorVinho: "Vinho Branco",
     tituloVinho: "Branco 2024",
     ingredientesTitulo: "Ingredientes",
     ingredienteUvas: "Uvas: Rabigato e Viosinho",
@@ -155,6 +209,17 @@
     sal: "Sal"
   },
   en: {
+    infoProdutoTitle: "Product Information",
+    labelTipoProduto: "Product type:",
+    valorTipoProduto: "Wine",
+    labelAlcool: "alc.:",
+    valorAlcool: "13.5% vol",
+    labelAnoVintage: "Vintage year:",
+    valorAnoVintage: "2024",
+    labelTeorAcucar: "Sugar level:",
+    valorTeorAcucar: "Dry",
+    labelCorVinho: "Wine color:",
+    valorCorVinho: "White Wine",
     tituloVinho: "White 2024",
     ingredientesTitulo: "Ingredients",
     ingredienteUvas: "Grapes: Rabigato and Viosinho",
@@ -171,6 +236,17 @@
     sal: "Salt"
   },
   fr: {
+    infoProdutoTitle: "Informations sur le produit",
+    labelTipoProduto: "Type de produit:",
+    valorTipoProduto: "Vin",
+    labelAlcool: "alc.:",
+    valorAlcool: "13.5% vol",
+    labelAnoVintage: "Millésime:",
+    valorAnoVintage: "2024",
+    labelTeorAcucar: "Teneur en sucre:",
+    valorTeorAcucar: "Sec",
+    labelCorVinho: "Couleur du vin:",
+    valorCorVinho: "Vin blanc",
     tituloVinho: "Blanc 2024",
     ingredientesTitulo: "Ingrédients",
     ingredienteUvas: "Raisins : Rabigato et Viosinho",
@@ -187,6 +263,17 @@
     sal: "Sel"
   },
   de: {
+    infoProdutoTitle: "Produktinformationen",
+    labelTipoProduto: "Produkttyp:",
+    valorTipoProduto: "Wein",
+    labelAlcool: "alc.:",
+    valorAlcool: "13,5% vol",
+    labelAnoVintage: "Jahrgang:",
+    valorAnoVintage: "2024",
+    labelTeorAcucar: "Zuckergehalt:",
+    valorTeorAcucar: "Trocken",
+    labelCorVinho: "Weinfarbe:",
+    valorCorVinho: "Weißwein",
     tituloVinho: "Weiß 2024",
     ingredientesTitulo: "Zutaten",
     ingredienteUvas: "Trauben: Rabigato und Viosinho",
@@ -209,6 +296,17 @@
   document.querySelector("#ingredientes h2").textContent = translations[lang].ingredientes;
   document.querySelector("#nutricao h2").textContent = translations[lang].nutricao;
   document.querySelector(".footer").textContent = translations[lang].footer;
+  document.getElementById("info-produto-title").textContent = translations[lang].infoProdutoTitle;
+  document.getElementById("label-tipo-produto").textContent = translations[lang].labelTipoProduto;
+  document.getElementById("valor-tipo-produto").textContent = translations[lang].valorTipoProduto;
+  document.getElementById("label-alcool").textContent = translations[lang].labelAlcool;
+  document.getElementById("valor-alcool").textContent = translations[lang].valorAlcool;
+  document.getElementById("label-ano-vintage").textContent = translations[lang].labelAnoVintage;
+  document.getElementById("valor-ano-vintage").textContent = translations[lang].valorAnoVintage;
+  document.getElementById("label-teor-acucar").textContent = translations[lang].labelTeorAcucar;
+  document.getElementById("valor-teor-acucar").textContent = translations[lang].valorTeorAcucar;
+  document.getElementById("label-cor-vinho").textContent = translations[lang].labelCorVinho;
+  document.getElementById("valor-cor-vinho").textContent = translations[lang].valorCorVinho;
   document.querySelector("#ingredientes h2").textContent = translations[lang].ingredientesTitulo;
   document.getElementById("ingrediente-uvas").textContent = translations[lang].ingredienteUvas;
   document.getElementById("ingrediente-sulfitos").textContent = translations[lang].ingredienteSulfitos;
