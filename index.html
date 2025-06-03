@@ -162,9 +162,12 @@
    <section id="ingredientes">
   <h2 id="ingredientes-titulo">Ingredientes</h2>
   <ul>
-    <li id="ingrediente-uvas">Uvas: Rabigato e Viosinho</li>
-    <li id="ingrediente-sulfitos">Sulfitos (dióxido de enxofre)</li>
-  </ul>
+  <li id="ingrediente-uvas">Uvas: Rabigato e Viosinho</li>
+  <li id="ingrediente-sulfitos">Sulfitos (dióxido de enxofre)</li>
+  <li id="ingrediente-acido">Ácido ascórbico (antioxidante)</li>
+  <li id="ingrediente-cmc">CMC (agente estabilizador)</li>
+  <li id="ingrediente-azoto">Azoto (gás de embalagem)</li>
+</ul>
 </section>
 
     <div class="section" id="nutricao">
@@ -220,6 +223,9 @@
     ingredientesTitulo: "Ingredientes",
     ingredienteUvas: "Uvas: Rabigato e Viosinho",
     ingredienteSulfitos: "Sulfitos (dióxido de enxofre)",
+    ingredienteAcido: "Ácido ascórbico (antioxidante)",
+    ingredienteCmc: "CMC (agente estabilizador)",
+    ingredienteAzoto: "Azoto (gás de embalagem)",
     infoProdutoTitle: "Informação do Produto",
     labelTipoProduto: "Tipo de produto:",
     valorTipoProduto: "Vinho",
@@ -246,6 +252,9 @@
     ingredientesTitulo: "Ingredients",
     ingredienteUvas: "Grapes: Rabigato and Viosinho",
     ingredienteSulfitos: "Sulfites (sulfur dioxide)",
+    ingredienteAcido: "Ascorbic acid (antioxidant)",
+    ingredienteCmc: "CMC (stabilizer)",
+    ingredienteAzoto: "Nitrogen (packaging gas)",
     infoProdutoTitle: "Product Information",
     labelTipoProduto: "Product type:",
     valorTipoProduto: "Wine",
@@ -272,6 +281,9 @@
     ingredientesTitulo: "Ingrédients",
     ingredienteUvas: "Raisins : Rabigato et Viosinho",
     ingredienteSulfitos: "Sulfites (dioxyde de soufre)",
+    ingredienteAcido: "Acide ascorbique (antioxydant)",
+    ingredienteCmc: "CMC (agent stabilisant)",
+    ingredienteAzoto: "Azote (gaz d’emballage)",
     infoProdutoTitle: "Informations sur le produit",
     labelTipoProduto: "Type de produit:",
     valorTipoProduto: "Vin",
@@ -298,6 +310,9 @@
     ingredientesTitulo: "Zutaten",
     ingredienteUvas: "Trauben: Rabigato und Viosinho",
     ingredienteSulfitos: "Sulfite (Schwefeldioxid)",
+    ingredienteAcido: "Ascorbinsäure (Antioxidationsmittel)",
+    ingredienteCmc: "CMC (Stabilisator)",
+    ingredienteAzoto: "Stickstoff (Verpackungsgas)",
     infoProdutoTitle: "Produktinformationen",
     labelTipoProduto: "Produkttyp:",
     valorTipoProduto: "Wein",
@@ -325,6 +340,9 @@ document.getElementById("lang").addEventListener("change", function () {
   const lang = this.value;
   document.getElementById("titulo-vinho").textContent = translations[lang].tituloVinho;
   document.getElementById("ingredientes-titulo").textContent = translations[lang].ingredientesTitulo;
+  document.getElementById("ingrediente-acido").textContent = translations[lang].ingredienteAcido;
+  document.getElementById("ingrediente-cmc").textContent = translations[lang].ingredienteCmc;
+  document.getElementById("ingrediente-azoto").textContent = translations[lang].ingredienteAzoto;
   document.getElementById("nutricao-titulo").textContent = translations[lang].nutricaoTitulo;
   document.querySelector(".footer").textContent = translations[lang].footer;
   document.getElementById("info-produto-title").textContent = translations[lang].infoProdutoTitle;
